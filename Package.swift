@@ -8,8 +8,21 @@ let package = Package(
         .executableTarget(
             name: "App",
             dependencies: ["TestLib"],
+            cxxSettings: [
+                .unsafeFlags([
+                    // "-Xlinker", "-fuse-ld=lld",
+                ])
+            ],
             swiftSettings: [
-                .interoperabilityMode(.Cxx)
+                .interoperabilityMode(.Cxx),
+                .unsafeFlags([
+                    // "-Xlinker", "-fuse-ld=lld",
+                ])
+            ],
+            linkerSettings: [
+                .unsafeFlags([
+                    // "-Xlinker", "-fuse-ld=lld",
+                ])
             ]
         ),
         .binaryTarget(

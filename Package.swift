@@ -9,19 +9,24 @@ let package = Package(
             name: "App",
             dependencies: ["TestLib"],
             cxxSettings: [
+                // .disableWarning("nullability-completeness"),
                 .unsafeFlags([
-                    // "-Xlinker", "-fuse-ld=lld",
+
                 ])
             ],
             swiftSettings: [
                 .interoperabilityMode(.Cxx),
                 .unsafeFlags([
-                    // "-Xlinker", "-fuse-ld=lld",
+                    // We know our library has problems
+                    "-Xcc", "-Wno-nullability-completeness",
+                    "-Xcc", "-std=c++17",
                 ])
             ],
             linkerSettings: [
+                .linkedLibrary("stdc++"),
                 .unsafeFlags([
-                    // "-Xlinker", "-fuse-ld=lld",
+                    // Ensure our program is linked using lld
+                    "-use-ld=lld",
                 ])
             ]
         ),

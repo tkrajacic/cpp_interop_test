@@ -1,0 +1,22 @@
+{
+    "configurations": [
+        {
+            "type": "swift",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:interop1}",
+            "name": "Debug interop1",
+            "program": "${workspaceFolder:interop1}/.build/debug/interop1",
+            "preLaunchTask": "swift: Build Debug interop1"
+        },
+        {
+            "type": "swift",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:interop1}",
+            "name": "Release interop1",
+            "program": "${workspaceFolder:interop1}/.build/release/interop1",
+            "preLaunchTask": "swift: Build Release interop1"
+        }
+    ]
+}

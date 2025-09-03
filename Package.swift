@@ -6,7 +6,7 @@ let package = Package(
     name: "interop1",
     targets: [
         .executableTarget(
-            name: "interop1",
+            name: "App",
             swiftSettings: [
                 .interoperabilityMode(.Cxx)
             ]

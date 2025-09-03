@@ -6,10 +6,15 @@ let package = Package(
     name: "interop1",
     targets: [
         .executableTarget(
-            name: "interop1",
+            name: "App",
+            dependencies: ["TestLib"],
             swiftSettings: [
                 .interoperabilityMode(.Cxx)
             ]
         ),
+        .binaryTarget(
+            name: "TestLib", 
+            path: "testlib.artifactbundle"
+        )
     ]
 )

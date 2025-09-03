@@ -1,0 +1,21 @@
+{
+    "schemaVersion": "1.0",
+    "artifacts": {
+        "TestLib": {
+            "version": "1.0",
+            "type": "staticLibrary",
+            "variants": [
+                {
+                    "path": "libtestlib.a",
+                    "supportedTriples": ["x86_64-unknown-linux-gnu"],
+                    "staticLibraryMetadata": {
+                          "headerPaths": [
+                            "include"
+                        ],
+                          "moduleMapPath": "include/module.modulemap"
+                    }
+                }
+            ]
+        }
+    }
+}

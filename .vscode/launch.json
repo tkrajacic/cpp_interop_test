@@ -17,6 +17,24 @@
             "name": "Release interop1",
             "program": "${workspaceFolder:interop1}/.build/release/interop1",
             "preLaunchTask": "swift: Build Release interop1"
+        },
+        {
+            "type": "swift",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:interop1}",
+            "name": "Debug App",
+            "program": "${workspaceFolder:interop1}/.build/debug/App",
+            "preLaunchTask": "swift: Build Debug App"
+        },
+        {
+            "type": "swift",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:interop1}",
+            "name": "Release App",
+            "program": "${workspaceFolder:interop1}/.build/release/App",
+            "preLaunchTask": "swift: Build Release App"
         }
     ]
 }
